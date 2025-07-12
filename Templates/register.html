@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Register - My Service Bot{% endblock %}
+{% block layout_class %}auth-mode{% endblock %}
+{% block content %}
+<div class="auth-card">
+    <!-- Text-based application title/logo -->
+    <h1 class="app-title">My Service Bot</h1>
+    <h2>Join My Service Bot</h2>
+    <p class="subtitle">Create an account to get started.</p>
+    <form action="{{ url_for('register') }}" method="post">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autocomplete="new-username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="new-password">
+        </div>
+        {% if error %}
+            <!-- Display error message if present -->
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        <button type="submit" class="btn primary-btn">Register</button>
+    </form>
+    <div class="auth-footer">
+        <p>Already have an account?</p>
+        <!-- Link to the login page, styled as a button -->
+        <a href="{{ url_for('login') }}" class="btn secondary-btn-link">Login Here</a>
+    </div>
+</div>
+{% endblock %}

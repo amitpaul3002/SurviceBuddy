@@ -1,0 +1,136 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good evening"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! How can I help you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "see you", "goodbye", "talk later", "exit"],
+      "responses": ["Goodbye! Have a great day.", "See you soon!"]
+    },
+    {
+      "tag": "product_info",
+      "patterns": [
+        "Tell me about your products",
+        "What products do you offer?",
+        "Product details",
+        "Information on products",
+        "List of products"
+      ],
+      "responses": [
+        "We offer smartphones, laptops, and accessories. Which one would you like to know more about?",
+        "Our main products include smartphones, laptops, and smartwatches. Do you want details on any specific product?"
+      ]
+    },
+    {
+      "tag": "product_price",
+      "patterns": [
+        "What is the price of the smartphone?",
+        "How much does the laptop cost?",
+        "Price details of smartwatches",
+        "Cost of products"
+      ],
+      "responses": [
+        "Smartphones start at $299, laptops from $799, and smartwatches from $149. Which product are you interested in?"
+      ]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "Where is my order?",
+        "Track my order",
+        "Order status",
+        "When will my order arrive?",
+        "Check order"
+      ],
+      "responses": [
+        "Please provide your order number, and I will check the status for you.",
+        "Can you share your order ID to track your shipment?"
+      ]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": [
+        "What is your return policy?",
+        "How can I return a product?",
+        "Return process",
+        "Can I return a product?",
+        "Product return"
+      ],
+      "responses": [
+        "You can return products within 30 days of purchase. Please ensure the product is unused and in original packaging.",
+        "Our return policy allows returns within 30 days. Contact our support for initiating a return."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "My device is not working",
+        "I have a problem with my product",
+        "Product is faulty",
+        "Help with product issue",
+        "Troubleshooting"
+      ],
+      "responses": [
+        "I’m sorry to hear that. Can you describe the problem or provide the error message?",
+        "Please describe the issue you're facing, and I’ll try to help you troubleshoot."
+      ]
+    },
+    {
+      "tag": "shipping_info",
+      "patterns": [
+        "Shipping details",
+        "Delivery time",
+        "When will my order be delivered?",
+        "Shipping options",
+        "Do you offer free shipping?"
+      ],
+      "responses": [
+        "We offer standard and express shipping. Standard delivery takes 5-7 business days, express takes 2-3 days.",
+        "Free shipping is available for orders above $50."
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "What payment methods do you accept?",
+        "Can I pay by credit card?",
+        "Payment options",
+        "Do you accept PayPal?"
+      ],
+      "responses": [
+        "We accept credit/debit cards, PayPal, and net banking.",
+        "You can pay using Visa, MasterCard, PayPal, and other popular payment methods."
+      ]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "I want to file a complaint",
+        "How do I report an issue?",
+        "Customer complaint",
+        "I am not happy with the product",
+        "Problem with order"
+      ],
+      "responses": [
+        "I’m sorry for the inconvenience. Please provide details about your issue, and I will escalate it to the support team.",
+        "Please share your complaint details, and we will address it promptly."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thank you so much",
+        "Thanks for the help"
+      ],
+      "responses": [
+        "You’re welcome! Let me know if you need any more assistance.",
+        "Glad I could help! Have a great day."
+      ]
+    }
+  ]
+}

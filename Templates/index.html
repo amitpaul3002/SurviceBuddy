@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Chat with My Service Bot{% endblock %}
+
+{% block content %}
+<header class="chat-header">
+    <div class="user-info">
+        <span class="material-icons user-icon">person</span>
+        <span>Hello, {{ username }}!</span>
+    </div>
+    <a href="{{ url_for('logout') }}" class="btn secondary-btn">Logout</a>
+</header>
+
+<main class="chat-main">
+    <div class="chat-container" id="chat-container">
+        <div class="message bot-message">
+            <span class="material-icons bot-icon">robot</span>
+            <p>Hello! I am your service bot. How can I assist you today?</p>
+        </div>
+        {% for chat in chat_history %}
+            {% if chat.sender == 'user' %}
+                <div class="message user-message">
+                    <p>{{ chat.message }}</p>
+                    <span class="material-icons">person</span>
+                </div>
+            {% else %}
+                <div class="message bot-message">
+                    <span class="material-icons bot-icon">robot</span>
+                    <p>{{ chat.message }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</main>
+
+<footer class="chat-footer">
+    <form action="{{ url_for('chatbot_page') }}" method="post" class="input-area">
+        <input type="text" id="user-input" name="user_input" placeholder="Message My Service Bot..." autofocus required>
+        <button type="submit" class="btn send-btn">
+            <span class="material-icons">send</span>
+        </button>
+    </form>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.onload = function () {
+        const chatMain = document.querySelector(".chat-main");
+        if (chatMain) {
+            chatMain.scrollTop = chatMain.scrollHeight;
+        }
+    };
+</script>
+{% endblock %}
