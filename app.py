@@ -7,17 +7,17 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 # Download necessary NLTK data (only needs to be run once)
 try:
     nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
+except LookupError:
     nltk.download('punkt')
 
 app = Flask(__name__)
 app.secret_key = 'your_super_secret_key_here' # CHANGE THIS TO A STRONG, RANDOM KEY!
 
 # --- Chatbot Logic (from your provided code - unchanged) ---
-def load_intents(file_path='intents1.json'):
-    with open(file_path, 'r') as file:
-        intents = json.load(file)
-    return intents
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def load_intents(file_path=os.path.join(BASE_DIR, 'intents1.json')):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
 
 def tokenize_sentence(sentence):
     tokens = word_tokenize(sentence.lower())
