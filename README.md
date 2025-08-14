@@ -51,7 +51,7 @@ Setup Instructions
 Clone or download this repository
 
 
-git clone https://github.com/yourusername/servicebuddy.git
+git clone https://github.com/amitpaul3002/SurviceBuddy.git
 cd servicebuddy
 Create and activate a virtual environment (optional but recommended)
 
