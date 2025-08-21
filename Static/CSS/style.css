@@ -26,6 +26,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+.bot-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.robot-icon-large {
+    font-size: 36px; /* bigger robot icon */
+    color: #4a90e2; /* optional color */
+}
+
+.bot-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+}
 
 .auth-card {
     max-width: 300px;
