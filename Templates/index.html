@@ -4,12 +4,17 @@
 
 {% block content %}
 <header class="chat-header">
+    <div class="bot-logo">
+        <span class="material-icons robot-icon-large">smart_toy</span>
+        <span class="bot-name">My Service Bot</span>
+    </div>
     <div class="user-info">
         <span class="material-icons user-icon">person</span>
         <span>Hello, {{ username }}!</span>
     </div>
     <a href="{{ url_for('logout') }}" class="btn secondary-btn">Logout</a>
 </header>
+
 
 <main class="chat-main">
     <div class="chat-container" id="chat-container">
